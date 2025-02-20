@@ -1,0 +1,23 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+nav {
+  background-color: #eee;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+nav .container {
+  height: calc(3em + 4px);
+}
+nav .container section {
+  padding: calc(1em + 2px);
+  width: 100vw;
+}
+nav .container section a {
+  border: solid 1px transparent;
+  padding: 1em;
+}
