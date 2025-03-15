@@ -1,14 +1,251 @@
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
+h1 {
+  color: #30353b;
+}
+form{
+  display: inline;
+}
+input.search{
+    width: 76%;
+    padding: 12px 24px;
+
+    background-color: transparent;
+    transition: transform 250ms ease-in-out;
+    font-size: 14px;
+    line-height: 18px;
+    
+    color: #30353b;
+    background-color: transparent;
+/*         background-image: url(http://mihaeltomic.com/codepen/input-search/ic_search_black_24px.svg); */
+
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: 95% center;
+    border-radius: 5px;
+    border: 1px solid #30353b;
+    transition: all 250ms ease-in-out;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    
+    &::placeholder {
+        color: color(#30353b a(0.8));
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+    
+    &:hover,
+    &:focus {
+        padding: 12px 0;
+        outline: 0;
+        border: 1px solid transparent;
+        border-bottom: 1px solid #30353b;
+        border-radius: 0;
+        background-position: 100% center;
+    }
+}
+input.new{
+  width: 95%;
+  padding: 12px 24px;
+
+  background-color: transparent;
+  transition: transform 250ms ease-in-out;
+  font-size: 14px;
+  line-height: 18px;
+  
+  color: #30353b;
+  background-color: transparent;
+/*         background-image: url(http://mihaeltomic.com/codepen/input-search/ic_search_black_24px.svg); */
+
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: 95% center;
+  border-radius: 5px;
+  border: 1px solid #30353b;
+  transition: all 250ms ease-in-out;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  
+  &::placeholder {
+      color: color(#30353b a(0.8));
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+  }
+  
+  &:hover,
+  &:focus {
+      padding: 12px 0;
+      outline: 0;
+      border: 1px solid transparent;
+      border-bottom: 1px solid #30353b;
+      border-radius: 0;
+      background-position: 100% center;
+  }
+}
+
+
+details summary { 
+  cursor: pointer;
+}
+summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+
+summary::after {
+  content: '';
+  width: 18px;
+  height: 10px;
+  background: url('https://uploads.sitepoint.com/wp-content/uploads/2023/10/1697699669arrow.svg') no-repeat;
+  background-size: cover;
+  transition: 0.2s;
+}
+
+details[open] > summary::after {
+  transform: rotate(180deg);
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary {
+  color: #30353b;
+  border-radius: 5px;
+  letter-spacing: 1.5px;
+}
+
+details[open] summary {border-radius: 5px 5px 0 0;}
+
+details {
+  background-color: #e792e7;
+  background-image: linear-gradient(45deg, #68a0b7 0%, #6eb7f1 100%);
+  border-radius: 5px;
+  margin: 2px;
+  padding: 8px;
+}
+
+/* extra styles */
+
+* {box-sizing: border-box;}
+body {font-family: system-ui, sans-serif; margin: 20px; background: #fff9f1;letter-spacing: 1.5px;}
+h1 {font-size: 1.2em;}
+article > *:first-child {margin: 0;}
+article > * + * {margin: 0.75em 0 0 0;}
+p {color: white; background: #443c35; padding: 1em; border-radius: 5px;}
+details div {color: white; background: #443c35; padding: 1em; border-radius: 5px; margin: 2px;}
+details button{background: #24211f;padding: 5px; margin: 2px;}
+article {padding: 10px; margin: 0;}
+details code {font-size: 1.1em;}
+
+
+
+/* Style the entire pagination container */
+.react-paginate {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the pagination wrapper */
+.pagination {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style individual page items */
+.page-item {
+  display: inline-block;
+  border-radius: 5px;
+  margin: 0;
+}
+
+/* Style the page links (the clickable page numbers) */
+.page-link {
+  display: block;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  color: #30353b;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.page-link:hover {
+  background-color: #f0f0f0;
+}
+
+/* Style the active page (the selected page) */
+.page-item.active .page-link {
+  background-color: #30353b;
+  color: white;
+  border-color: #30353b;
+}
+
+/* Style disabled page items (e.g., when you can't go back or forward) */
+.page-item.disabled .page-link {
+  background-color: #e9ecef;
+  color: #30353b;
+  pointer-events: none;
+}
+
+/* Style the break label (e.g., the "..." between pages) */
+.page-item.break .page-link {
+  pointer-events: none;
+  background-color: transparent;
+  color: #30353b;
+}
+/* Style the Next and Previous buttons */
+/* Style for the Next and Previous buttons using their aria-label attribute */
+li.next,
+li.previous,
+li.break {
+  display: inline-block;
+  padding: 8px 16px;
+  font-weight: bold;
+  color: #30353b;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px; /* Add spacing between buttons */
+  letter-spacing: 1.5px;
+}
+
+/* Hover effect for Next/Previous buttons */
+li.next:hover,
+li.previous:hover,
+li.break:hover {
+  background-color: #f0f0f0;
+  color: #30353b;
+}
+
 
 nav {
-  background-color: #eee;
+  background-image: linear-gradient(45deg, #68a0b7 0%, #6eb7f1 100%);
   overflow: hidden;
   scroll-behavior: smooth;
+  letter-spacing: 1.5px;
+}
+nav h1{
+  color: #30353b;
 }
 nav .container {
   height: calc(3em + 4px);
@@ -16,8 +253,23 @@ nav .container {
 nav .container section {
   padding: calc(1em + 2px);
   width: 100vw;
+
 }
 nav .container section a {
   border: solid 1px transparent;
   padding: 1em;
+  color: #30353b;
+}
+nav .container section a:hover{
+  color: #2f5b92;
+}
+
+button{
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 1px;
+  padding: 12px 24px;
+  letter-spacing: 1.5px;
+  background-color:  #30353b;;
 }
